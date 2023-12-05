@@ -1,0 +1,376 @@
+html{
+    min-height: 100%; 
+}
+a.skip {
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+a.skip:focus {
+    top: 20px;
+    color: black;
+    text-decoration-style: solid;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #FEA02F;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    font-family: Avenir;
+    font-weight: lighter;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+footer:first-child {
+    margin-left: 20px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 10px
+}
+
+.footer > *{
+    margin: 20px;
+}
+
+body{
+    background-color: #B1CDED;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage {
+    background-color: white;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 80px);
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.background{
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background-color: #B1CDED;
+    z-index: -1;
+}
+
+.background2{
+    width: 70%;
+    float: right;
+    background-color: white;
+}
+
+p{
+    color: black;
+    font-family: Caudex;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    align-items: center;
+    margin-right: 30px;
+}
+
+h1 {
+    color: #281A39;
+    font-size: 30px;
+    font-family: Caudex;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-size: 30px;
+    font-family: Caudex; 
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.icon {
+    width: 50px;
+    margin: 10px;
+}
+
+.social {
+    width: 30px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.title{
+    color: black;
+    font-size: 18px;
+    font-family: Avenir;
+    font-weight: lighter;
+    text-align: center;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+
+.nav_item a {
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-family: Avenir;
+    font-weight: lighter;
+}
+
+.nav_item a:visited {
+    color: black;
+}
+
+.nav_item a:hover, .nav_item a:focus, .nav_links a.active{
+    color: #FEA02F;
+    text-decoration: underline;
+}
+
+.background {
+    flex: 0.3;
+    background-color: #B1CDED;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    align-items: start;
+    justify-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    grid-column: 2 / 3;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #D7E5F6;
+    padding: 20px;
+    width: 350px;
+}
+
+.top > *{
+    margin: 10px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    justify-content: center;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    align-items: center;
+    grid-column: 3 / 4;
+    row-gap: 30px;
+    padding: 20px;
+}
+
+.grid > p{
+    grid-column: 1 / 3;
+    font-family: Avenir;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+}
+
+
+#contactForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-top: 50px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-family: Avenir;
+    font-weight: lighter;
+}
+
+.firstname > label::after, .lastname > label::after, .email > label::after{
+    content: '*';
+    color: #FEA02F;
+    margin-left: 10px;
+}
+
+.email, .subject, .message {
+    grid-column: 1 / 3;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    transition: border-bottom-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-bottom: 1px solid #FEA02F;
+}
+
+.submit > input, .button1{
+    background-color: #FEA02F;
+    color: #ffffff;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+}
+
+.submit > input:hover, .button1:hover{
+    background-color: white;
+    color: #FEA02F;
+    border: 2px solid #FEA02F;
+}
+
+.button2{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.button2:hover{
+    background-color: #FEA02F;
+    color: white;
+    border: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    row-gap: 30px;
+}
+
+.education, .experience, .skills{
+    grid-column: 2 / span 1;
+    background-color: white;
+    padding: 20px;
+}
+
+.container > h1{
+    grid-column: 2 / span 1;
+    text-align: center;
+    font-family: Caudex;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 20px;
+    grid-row: 1;
+}
+
+.info1{
+    grid-column: 2 / span 1;
+    grid-row: 2;
+}
+
+.info2{
+    grid-column: 2 / span 1;
+    grid-row: 5;
+}
+
+.animation {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
