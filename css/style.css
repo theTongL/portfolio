@@ -45,7 +45,7 @@ footer {
     font-weight: lighter;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: auto;
 }
 
 footer:first-child {
@@ -80,6 +80,15 @@ main{
     flex-direction: column;
     min-height: calc(100vh - 80px);
     padding: 100px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 80px);
+    padding: 100px;
     justify-content: center;
     align-items: center;
 }
@@ -92,10 +101,11 @@ main{
     z-index: -1;
 }
 
-.background2{
-    width: 70%;
-    float: right;
-    background-color: white;
+.block{
+    height: 20px; 
+    width: 20px; 
+    background-color: #FEA02F;
+    margin-right: 10px;
 }
 
 p{
@@ -131,6 +141,14 @@ h2 {
     font-size: 30px;
     font-family: Caudex; 
     font-weight: 500;
+    margin-bottom: 2px;
+}
+
+h3 {
+    color: #FEA02F;
+    font-size: 20px;
+    font-family: Caudex; 
+    font-weight: 700;
     margin-bottom: 2px;
 }
 
@@ -334,31 +352,154 @@ input:focus, textarea:focus {
     grid-template-columns: 1fr 3fr 1fr;
     row-gap: 30px;
 }
-
-.education, .experience, .skills{
+.download{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     grid-column: 2 / span 1;
-    background-color: white;
-    padding: 20px;
+    grid-row: 2;
 }
 
-.container > h1{
+.education, .experience, .skills, .programming{
     grid-column: 2 / span 1;
-    text-align: center;
+    background-color: white;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.experience > h3, .education > h3, .skills > h3, .programming > h3{
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.title{
+    grid-column: 2 / span 1;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+.title > h1{
     font-family: Caudex;
     font-weight: 700;
     font-size: 30px;
-    margin-bottom: 20px;
     grid-row: 1;
 }
 
 .info1{
     grid-column: 2 / span 1;
-    grid-row: 2;
+    grid-row: auto;
 }
 
 .info2{
     grid-column: 2 / span 1;
-    grid-row: 5;
+    grid-row: 2;
+}
+
+.resume{
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume li{
+    margin: 10px;
+    font-size: 16px; 
+    font-weight: lighter; 
+    font-family: Avenir;
+}
+
+.resume li::before {
+    content: "\25A0";
+    color: #FEA02F; 
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.subhead{
+    font-size: 16px; 
+    font-weight: lighter; 
+    font-family: Avenir;
+}
+
+.sub{
+    font-size: 14px; 
+    font-weight: lighter; 
+    font-family: Avenir;
+}
+
+.apps{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.apps > img{
+    height: 50px;
+    margin: 10px;
+}
+
+.work{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.project > img{
+    width: auto;
+    height: 300px;
+}
+
+.work > div:nth-child(3n - 2){
+    grid-column: 2 / span 1;
+}
+
+.inside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+  
+.project:hover {
+    width: auto; /* Set the expanded width on hover */
+    height: 400px; /* Set the expanded height on hover */
+    background-color: #fff; /* Set the background color on hover */
+}
+  
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333;
+    z-index: 1;
+}
+  
+.read-more {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+}
+  
+.container:hover .read-more {
+    display: inline-block;
 }
 
 .animation {
